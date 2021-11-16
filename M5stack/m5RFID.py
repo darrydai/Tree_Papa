@@ -49,7 +49,7 @@ def fun_park_board_1_videoState_(topic_data):
   state.set_text(playState)
   pass
 
-m5mqtt = M5mqtt('', '192.168.1.110', 1883, '', '', 300)
+m5mqtt = M5mqtt('', '192.168.10.115', 1883, '', '', 300)
 m5mqtt.subscribe(str('park/board/1/videoState'), fun_park_board_1_videoState_)
 m5mqtt.start()
 neopixel_0.setColorFrom(1, 9, 0x00000)
